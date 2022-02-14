@@ -1,0 +1,51 @@
+EJEMPLO 1***********************************************************************************************************
+
+[comando ] Estadisiticos -> Ajustes de modelos -> Regresion lineal.
+ a) Coeficiente de determinación = Multiple R-squared:  0.6382
+	El 63'82% de la variabilidad de la variable aceleración es explicada por las Xi a través del modelo
+
+b) F-statistic: 173.8 on 4 and 394 DF,  p-value: < 2.2e-16
+
+c) Se rechaza el termino independiente -> p-valor < 2e-16 < ALFA (B0!=0)
+   No se rechaza X1 -> p-valor = 0.116 > ALFA
+   Se rechaza el X2 -> p-valor < 2e-16 < ALFA (B2!=0)
+   Se rechaza el X3 -> p-valor < 2e-16 < ALFA (B3!=0)
+   No se rechaza X4 -> p-valor = 0.146 > ALFA
+
+d) Termino X0 = 17.9285204
+   Termino X1 = -0.2567606
+   Termino X2 = -0.0869459
+   Termino X3 = +0.0091757
+   Termino X4 = -0.0003232
+
+EJEMPLO 2***********************************************************************************************************
+
+crear conjunto de datos.
+[comando ] Gráficas -> Diagrama de dispersión
+a) Sí tiene sentido
+
+ [comando 2] Datos -> Modificar variables[...] -> Calcular una nueva variable
+ [comando 3] Estadisiticos -> Ajustes de modelos -> Regresion lineal.(X+X2)
+b)Coeficiente de determinacion = Multiple R-squared: 0.8
+
+c)Rechazamos el B0, ya que p-value: 0.04 < ALFA (0.05)
+
+d) Se rechaza el X0 -> p-valor = 0.0307 < ALFA (B0!=0)
+   No se rechaza X1 -> p-valor = 0.1161 > ALFA
+   Se rechaza el X2 -> p-valor = 0.0257 < ALFA (B2!=0)
+
+[comando 4] Estadisiticos -> Ajustes de modelos -> Regresion lineal(Solo X)
+f) comparando los Adjusted R-squared obtenemos que el R^2 de la parabola es mayor que el de la recta, por ello
+   cogemos dicho valor (0.7>0.04)
+
+EJEMPLO 3***********************************************************************************************************
+
+crear conjunto de datos "nolin"
+calcular nuevas variables, ln(x) y ln(y)
+[comando  ] Estadisiticos -> Ajustes de modelos -> Regresion lineal.(Ln(y) y Ln(x))
+
+*Estimacion de Ln(ALFA)= -0.09986 -> Estimacion de ALFA = 0.9049641
+
+*nls(y~alfa*x ^beta,data=nolin,start=list(alfa=0.9049641,beta=1.89997))
+Estimacion de ALFA = 27.536
+Estimacion de BETA = 1.138

@@ -1,0 +1,52 @@
+*****EJEMPLO 1******************************************************************************************************
+
+[comando ] Datos -> Conjunto de datos activo -> Filtrar el conjunto de datos activo
+[comando2] Estadsticos -> Resumenes -> Test de normalidad (Shapiro-Wilk)
+	   W = 0.89222, p-value = 0.0248 (SE RECHAZA, P-VALOR <= ALFA)
+[comando3] Gráficas -> Gráficas de comparación de cuantiles
+[comando4] Editar -> borar fila actual (14, valor 59)
+[comando5] Estadsticos -> Resumenes -> Test de normalidad (Shapiro-Wilk)
+	   W = 0.90986, p-value = 0.06335 (SE ACEPTA, P-VALOR > ALFA)
+
+*****EJEMPLO 2******************************************************************************************************
+
+[comando ] Estadísticos -> Medias -> Test t para una muestra (Media poblacional < mu0; Hipótesis nula mu = 800;)
+							     (Nivel de confianza = 0.95  		       )
+	   P-Valor = 0.1578 -> No se rechaza la hipótesis
+[comando2] Estadísticos -> Medias -> Test t para una muestra (Media poblacional != mu0; Hipótesis nula mu = 800;)
+							     (Nivel de confianza = 0.95  		       )
+	   Intervalo de confianza al 95% = (760.2961 , 816.5039)
+
+*****EJEMPLO 4******************************************************************************************************
+
+           X: tiempo en realizar la tarea antes de ingerir el alcohol
+           Y: timepo en realizar la tarea después de ingerir el alcohol
+[comando ] Estadísticos -> Medias -> Test t para datos relacionados (antes;después; opciones(Diferencia < 0;[...]))
+                                                                    (         (Nivel de confianza 0.95)           )
+           P-Valor = 0.0007992 -> Se rechaza H0 para U<0
+
+*****EJEMPLO 5******************************************************************************************************
+
+           X: nivel de virus con placebo
+           Y: nivel de virus con tratamiento
+[comando ] Estadísticos -> Varianzas -> Test F de dos varianzas (Bilateral)
+           P-Valor = 0.9546 > ALFA -> No se rechaza H0
+[comando2] Estadísticos -> Medias -> Test t para muestras independientes (         Diferencia > 0;           )
+                                                                         ( ¿Suponer varianzas iguales? =  SI )
+           P-Valor = 0.0003018 < ALFA -> Se rechaza H0
+
+*****EJERCICIO ¡6!****************************************************************************************************
+
+[comando ] Estadísticos -> Varianzas -> Test F de dos varianzas (Bilateral)
+           P-Valor = 2.69*10^-10 < ALFA -> Se rechaza H0
+[comando2] Estadísticos -> Medias -> Test t para muestras independientes (         Diferencia < 0;           )
+                                                                         ( ¿Suponer varianzas iguales? =  NO )
+           P-Valor = 2.2*10^-16 < ALFA -> Ser rechaza
+
+*****EJERCICIO 6****************************************************************************************************
+
+[comando ] Estadísticos -> Varianzas -> Test F de dos varianzas (Bilateral)
+           P-Valor = 0.1521 > ALFA -> No se rechaza H0
+[comando2] Estadísticos -> Medias -> Test t para muestras independientes (         Bilateral;                )
+                                                                         ( ¿Suponer varianzas iguales? =  SI )
+           P-Valor = 0.0115 < ALFA Ux!=Uy
